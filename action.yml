@@ -1,13 +1,9 @@
 ---
 name: cfn_nag
-description: >
-  Execute cfn_nag against the code in the repository where the GitHub Action
-  workflow is run.
+description: Execute cfn_nag against the code in the repository where the GitHub Action workflow is run.
 inputs:
   directory-to-scan:
-    description: >
-      Where cfn_nag_scan should scan for violations
-      (default: $GITHUB_WORKSPACE).
+    description: Where cfn_nag_scan should scan for violations (default is $GITHUB_WORKSPACE).
     default: '.'
 runs:
   using: docker
