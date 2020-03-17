@@ -6,11 +6,9 @@ description: >
 inputs:
   directory-to-scan:
     description: >
-      Required. Where cfn_nag_scan should scan for violations.
-    required: true
-outputs:
-  violations:
-    description: 'Number of violations found in the repo.'
+      Where cfn_nag_scan should scan for violations
+      (default: $GITHUB_WORKSPACE).
+    default: '.'
 runs:
   using: docker
   image: Dockerfile
