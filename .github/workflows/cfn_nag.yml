@@ -14,4 +14,5 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: pshelby/cfn-nag-github-action@master
-        run: cfn_nag_scan --input-path ${{ github.workspace }}
+        with:
+          directory-to-scan: ${{ github.workspace }}
