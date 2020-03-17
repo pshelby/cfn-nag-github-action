@@ -1,3 +1,3 @@
 FROM stelligent/cfn_nag:latest
 
-ENTRYPOINT [""]
+ENTRYPOINT ["cfn_nag_scan", "--input-path"]

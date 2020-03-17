@@ -6,8 +6,8 @@ description: >
 inputs:
   directory-to-scan:
     description: >
-      Where cfn_nag_scan should scan for violations. ($GITHUB_WORKSPACE)
-    default: '.'
+      Required. Where cfn_nag_scan should scan for violations.
+    required: true
 outputs:
   violations:
     description: 'Number of violations found in the repo.'
@@ -15,4 +15,4 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - "--input-path ${{ github.workspace }}/${{ inputs.directory-to-scan }}"
+    - ${{ inputs.directory-to-scan }}
