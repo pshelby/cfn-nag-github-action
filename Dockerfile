@@ -1,3 +1,3 @@
-FROM: stelligent/cfn_nag:latest
+FROM stelligent/cfn_nag:latest
 
-ENTRYPOINT: ["cfn_nag_scan -i"]
+ENTRYPOINT ["cfn_nag_scan -i"]
