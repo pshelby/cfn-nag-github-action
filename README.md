@@ -4,7 +4,7 @@ This action executes cfn_nag linter against the repo for which the workflow is r
 
 ## Inputs
 
-### `directory-to-scan`
+### `input-path`
 
 The directory of the repo to search for violations. Default `.`
 
@@ -13,5 +13,5 @@ The directory of the repo to search for violations. Default `.`
 ```
 uses: stelligent/cfn-nag-github-action@v1
 with:
-  directory-to-scan: templates
+  input-path: templates
 ```
