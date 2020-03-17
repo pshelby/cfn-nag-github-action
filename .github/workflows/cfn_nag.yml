@@ -1,0 +1,16 @@
+---
+name: cfn_nag
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  analyze:
+    name: cfn_nag Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - uses: pshelby/cfn-nag-github-action@master
