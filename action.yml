@@ -10,6 +10,6 @@ outputs:
     description: Number of violations found in the repo.
 runs:
   using: docker
-  image: docker://stelligent/cfn_nag:latest
+  image: Dockerfile
   args:
     - ${{ inputs.directory-to-scan }}
