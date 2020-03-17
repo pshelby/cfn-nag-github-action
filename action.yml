@@ -11,3 +11,5 @@ outputs:
 runs:
   using: docker
   image: docker://stelligent/cfn_nag:latest
+  args:
+    - ${{ inputs.directory-to-scan }}

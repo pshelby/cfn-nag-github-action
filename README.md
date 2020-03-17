@@ -16,6 +16,8 @@ Number of violations found.
 
 ## Example usage
 
+```
 uses: stelligent/cfn-nag-github-action@v1
 with:
   directory-to-scan: './templates'
+```
