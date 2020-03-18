@@ -9,5 +9,6 @@ runs:
   using: docker
   image: Dockerfile
   args:
+    - -n
     - --input-path
     - ${{ inputs.input_path }}

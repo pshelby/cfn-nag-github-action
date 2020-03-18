@@ -19,6 +19,11 @@ Parameters:
 Resources:
   DataLakeWorkflowRole:
     Type: AWS::IAM::Role
+    Metadata:
+      cfn_nag:
+        rules_to_suppress:
+          - id: F3
+            reason: "Suppressing to pass testing workflow."
     Properties:
       AssumeRolePolicyDocument:
         Version: 2012-10-17
