@@ -1,3 +1,6 @@
 FROM stelligent/cfn_nag:latest
 
-ENTRYPOINT ["cfn_nag_scan"]
+ARG INPUT_EXTRA_ARGS=''
+ENV INPUT_EXTRA_ARGS="${INPUT_EXTRA_ARGS}"
+
+ENTRYPOINT ["cfn_nag_scan", "${INPUT_EXTRA_ARGS}"]
