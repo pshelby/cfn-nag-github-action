@@ -1,14 +1,18 @@
 ---
-name: cfn_nag
-description: Execute cfn_nag against the code in the repository where the GitHub Action workflow is run.
+name: cfn_nag_scan
+description: Execute cfn_nag_scan against the code in the repository where the GitHub Action workflow is run.
 inputs:
   input_path:
-    description: 'Where cfn_nag_scan should scan for violations (default is $GITHUB_WORKSPACE).'
+    description: 'Where cfn_nag_scan should scan for violations (default: $GITHUB_WORKSPACE).'
     default: '.'
+  extra_args:
+    description: 'Additional arguments to pass to cfn_nag_scan, separated by space (default: "--print-suppression").'
+    required: false
+    default: '--print-suppression'
 runs:
   using: docker
   image: Dockerfile
   args:
-    - -n
+    - ${{ inputs.extra_args }}
     - --input-path
     - ${{ inputs.input_path }}
