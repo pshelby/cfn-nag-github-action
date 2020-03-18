@@ -16,4 +16,4 @@ jobs:
       - uses: pshelby/cfn-nag-github-action@master
         with:
           input_path: tests
-          extra_args: --fail-on-warnings
+          extra_args: --fail-on-warnings --print-suppression
