@@ -13,6 +13,5 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - ${{ inputs.extra_args }}
     - --input-path
     - ${{ inputs.input_path }}
