@@ -13,7 +13,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
-      - uses: pshelby/cfn-nag-github-action@master
+      - name: Simple test
+        uses: pshelby/cfn-nag-github-action@master
         with:
           input_path: tests
-          extra_args: --fail-on-warnings --print-suppression
+      - name: Test not showing suppression
+        uses: pshelby/cfn-nag-github-action@master
+        with:
+          input_path: tests
+          extra_args: ''
+      - name: Test with JSON output
+        uses: pshelby/cfn-nag-github-action@master
+        with:
+          input_path: tests
+          extra_args: -o json
+      - name: Test multiple extra args
+        uses: pshelby/cfn-nag-github-action@master
+        with:
+          input_path: tests
+          extra_args: -o json --template-pattern clean
