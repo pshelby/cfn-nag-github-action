@@ -7,11 +7,7 @@ inputs:
     default: '.'
   extra_args:
     description: 'Additional arguments to pass to cfn_nag_scan, separated by space (default: "--print-suppression").'
-    required: false
     default: '--print-suppression'
 runs:
   using: docker
   image: Dockerfile
-  args:
-    - --input-path
-    - ${{ inputs.input_path }}
