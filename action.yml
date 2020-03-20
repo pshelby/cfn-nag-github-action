@@ -1,6 +1,9 @@
 ---
 name: cfn_nag_scan
 description: Execute cfn_nag_scan against the code in the repository where the GitHub Action workflow is run.
+branding:
+  icon: search  
+  color: orange
 inputs:
   input_path:
     description: 'Where cfn_nag_scan should scan for violations (default: $GITHUB_WORKSPACE).'

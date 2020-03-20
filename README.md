@@ -1,6 +1,27 @@
+<img src="cfn_nag_logo.png" width="200px">
+
+![cfn-nag-github-action](https://github.com/stelligent/cfn-nag-github-action/workflows/testing/badge.svg)
+
 # cfn_nag GitHub Action
 
+The cfn-nag tool looks for patterns in CloudFormation templates that may indicate insecure infrastructure.
+Roughly speaking, it will look for:
+
+* IAM rules that are too permissive (wildcards)
+* Security group rules that are too permissive (wildcards)
+* Access logs that aren't enabled
+* Encryption that isn't enabled
+* Password literals
+
 This action executes cfn_nag_scan linter against the repo for which the workflow is run.  It exposes all the options for `cfn_nag_scan` (see [extra_args](https://github.com/stelligent/cfn-nag-github-action#extra_args) below) and allows you to point to a specific directory containing templates to scan.
+
+For more background on the tool, please see:
+
+[Finding Security Problems Early in the Development Process of a CloudFormation Template with "cfn-nag"](https://stelligent.com/2016/04/07/finding-security-problems-early-in-the-development-process-of-a-cloudformation-template-with-cfn-nag/)
+
+and:
+
+[cfn_nag GitHub repository](https://github.com/stelligent/cfn_nag)
 
 ## Inputs
 
